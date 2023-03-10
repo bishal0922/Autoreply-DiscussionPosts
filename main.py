@@ -15,6 +15,9 @@ openai.api_key = api_key
 
 ENDPOINT = "https://api.openai.com/v1/chat/completions"
 
+disussion_post = input("Enter your discussion post: ")
+gpt_prompt = "This is a discussion post. Generate a reply to it. " + disussion_post
+
 headers = {
     "Content-Type": "application/json",
     "Authorization": f"Bearer {api_key}"
@@ -24,7 +27,7 @@ data = {
     "model": "gpt-3.5-turbo",
     "messages": [{
         "role": "user",
-        "content": "Hello!"
+        "content": gpt_prompt
     }]
 }
 

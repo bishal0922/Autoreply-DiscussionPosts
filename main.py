@@ -33,8 +33,6 @@ data = {
 
 response = requests.post(ENDPOINT, data=json.dumps(data), headers=headers, timeout=10)
 
-# Get completion text from response
 completion_text = response.json()
 
-# Print completion text
 print(completion_text)
